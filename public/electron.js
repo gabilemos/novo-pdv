@@ -3,6 +3,15 @@ const { app, BrowserWindow, protocol } = require("electron");
 const path = require("path");
 const url = require("url");
 
+(async () =>{
+  const database = require('../Database/systemBase/systemBaseMgr');
+  await database.sync();
+}) ();
+
+
+
+
+
 // Create the native browser window.
 function createWindow() {
   const mainWindow = new BrowserWindow({

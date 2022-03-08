@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Paperbase from './template/Paperbase.tsx'
 import './index.css';
-import App from './App';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Paperbase />
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -72,7 +72,7 @@ const itemCategory = {
   px: 3,
 };
 
-export default function Navigator(props: DrawerProps) {
+export default function Navigator(props) {
   const { ...other } = props;
 
   return (

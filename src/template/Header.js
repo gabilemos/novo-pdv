@@ -1,4 +1,5 @@
 import * as React from 'react';
+import PropTypes from 'prop-types';
 import AppBar from '@mui/material/AppBar';
 import Grid from '@mui/material/Grid';
 import IconButton from '@mui/material/IconButton';
@@ -7,18 +8,13 @@ import Tab from '@mui/material/Tab';
 import Tabs from '@mui/material/Tabs';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import LoginMenu from './loginMenu';
 
 const lightColor = 'rgba(255, 255, 255, 0.7)';
 
-interface HeaderProps {
-  onDrawerToggle: () => void;
-}
-const MenuLoginList = () =>{
-  return(LoginMenu);
-}
 
-export default function Header(props: HeaderProps) {
+
+
+function Header(props) {
   const { onDrawerToggle } = props;
 
   return (
@@ -42,7 +38,6 @@ export default function Header(props: HeaderProps) {
                color="inherit"
                sx={{ p: 0.5 }}
                aria-label="Menu da conta"
-               onClick={MenuLoginList}
               >
               </IconButton>
             </Grid>
@@ -78,3 +73,8 @@ export default function Header(props: HeaderProps) {
   );
 }
 
+Header.propTypes = {
+  onDrawerToggle: PropTypes.func.isRequired,
+};
+
+export default Header;

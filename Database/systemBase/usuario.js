@@ -1,4 +1,4 @@
-const Sequelize     = require('sequilize');
+const Sequelize     = require('sequelize');
 const database      = require('./systemBaseMgr');
 
 const Usuario = database.define('system_usuario',{
@@ -9,21 +9,25 @@ const Usuario = database.define('system_usuario',{
         primaryKey:true
     },
     nome:{
-        type:Sequelize.STRING,
+        type:Sequelize.STRING(40),
         allowNull:false
     },
     login:{
-        type:Sequelize.STRING,
+        type:Sequelize.STRING(30),
         allowNull:false,
         unique:true,
     },
+    password:{
+        type:Sequelize.STRING(16),
+        allowNull:false
+    },
     email:{
-        type:Sequelize.STRING,
+        type:Sequelize.STRING(30),
         allowNull:false,
         unique:true
     },
     active:{
-        type:Sequelize.BOOLEAN,
+        type:Sequelize.TINYINT(1),
         defaultValue: true,
     }
 });

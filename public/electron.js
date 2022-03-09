@@ -5,7 +5,18 @@ const url = require("url");
 
 (async () =>{
   const database = require('../Database/systemBase/systemBaseMgr');
+  const Usuario = require("../Database/systemBase/usuario")
   await database.sync();
+
+  const novoUser = await Usuario.create({
+    nome:"joao",
+    login:"joaogomes30",
+    password:"bananaphone",
+    email:"deuclécio@hotmail.com",
+  })
+
+  const usuario = await Usuario.findAll();
+  console.log( usuario);
 }) ();
 
 

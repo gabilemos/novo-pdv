@@ -16,6 +16,10 @@ const Unidade = database.define('unidade',{
     fiscalId:{
         type:Sequelize.STRING(60),
         allowNull:false
+    },
+    abreviacao:{
+        type:Sequelize.STRING(4),
+        allowNull:false
     }
 });
 

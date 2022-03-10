@@ -1,11 +1,12 @@
 {
-  "name": "novo-pdv",
+  "name": "pdv",
   "version": "0.1.0",
   "private": true,
   "author": "Pedro Gomes",
   "description": "projeto base para criar um pdv offline com sincronização a um gerenciador online",
   "homepage": "./",
   "main": "./public/electron.js",
+  "icon": "./public/sources/pdv.png",
   "dependencies": {
     "@emotion/react": "^11.8.1",
     "@emotion/styled": "^11.8.1",
@@ -58,6 +59,7 @@
     "productName": "pdv offline",
     "files": [
       "build/**/*",
+      "./public/**/*",
       "node_modules/**/*"
     ],
     "directories": {

@@ -7,9 +7,10 @@ const url = require("url");
 //função de teste ao salvar no banco
 
 (async () =>{
+  try{
   const database = require('../Database/systemBase/systemBaseMgr');
   const Usuario = require("../Database/systemBase/models/usuario")
-  await database.sync();
+  await database.sync('force');
 
   const novoUser = await Usuario.create({
     nome:"joao",
@@ -20,6 +21,9 @@ const url = require("url");
 
   const usuario = await Usuario.findAll();
   console.log( usuario);
+}catch(error){
+  console.log(error);
+}
 }) ();
 
 
@@ -33,6 +37,7 @@ function createWindow() {
     height: 800,
     // Set the path of an additional "preload" script that can be used to
     // communicate between node-land and browser-land.
+    icon:'/pdv.ico',
     webPreferences: {
       preload: path.join(__dirname, "preload.js"),
     },

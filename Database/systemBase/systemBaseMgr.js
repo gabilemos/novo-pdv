@@ -4,4 +4,4 @@ const sequelize = new Sequelize({
     storage:'./Database/systemBase/systemBase.db'
 });
 
-module.exports = sequelize;
+module.exports = sequelize; 

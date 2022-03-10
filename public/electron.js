@@ -3,9 +3,12 @@ const { app, BrowserWindow, protocol } = require("electron");
 const path = require("path");
 const url = require("url");
 
+
+//função de teste ao salvar no banco
+
 (async () =>{
   const database = require('../Database/systemBase/systemBaseMgr');
-  const Usuario = require("../Database/systemBase/usuario")
+  const Usuario = require("../Database/systemBase/models/usuario")
   await database.sync();
 
   const novoUser = await Usuario.create({

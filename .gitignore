@@ -21,3 +21,9 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+#Database
+Database/produto/produto.db
+Database/systemBase/systemBase.db
+Database/venda/venda.db
+Database/systemBase/systemBase.db

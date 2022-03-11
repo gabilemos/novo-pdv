@@ -36,13 +36,18 @@ const Usuario = database.define('usuario',{
         type:Sequelize.TINYINT(1),
         defaultValue: true,
     },
-    system_pagina_inicial:{
+    programa_inicial:{
         type:Sequelize.INTEGER,
     }
 });
 
 //usuario->unidade
-Usuario.belongsTo(Unidade,{constraint:true});
+Usuario.belongsTo(Unidade,{
+    constraint:true,
+    foreingKey:'programa_inicial'
+});
+
+Usuario.belongsTo(Programa,{constraint:true})
 
 //usuario->usuarioPrograma->Programa
 Usuario.hasMany (UsuarioPrograma);

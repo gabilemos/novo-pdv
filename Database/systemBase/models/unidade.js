@@ -1,6 +1,7 @@
 const Sequelize     = require('sequelize');
 const database      = require('../systemBaseMgr');
 const Grupo         = require('./grupo');
+const Caixa         = require('./caixa');
 
 const Unidade = database.define('unidade',{
     id:{
@@ -24,5 +25,5 @@ const Unidade = database.define('unidade',{
 });
 
 Unidade.belongsTo(Grupo,{constrait:true});
-
+Unidade.hasMany(Caixa,{constrait:true});
 module.exports = Unidade;

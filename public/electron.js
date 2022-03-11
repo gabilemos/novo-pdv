@@ -4,8 +4,21 @@ const path = require("path");
 const url = require("url");
 
 
-//função de teste ao salvar no banco
 
+ console.log(process.env.NODE_ENV);
+//função de teste ao salvar no banco
+/*
+(async() => {
+  try{
+    const auth = require("../Api/GerenciadorPdv/updateSystemBase");
+    console.log(auth);
+  }catch(error){
+    console.log(error);
+  }
+})();*/
+
+
+/*
 (async () =>{
   try{
   const database = require('../Database/systemBase/systemBaseMgr');
@@ -24,7 +37,7 @@ const url = require("url");
 }catch(error){
   console.log(error);
 }
-}) ();
+}) ();*/
 
 
 

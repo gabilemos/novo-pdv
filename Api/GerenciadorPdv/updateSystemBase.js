@@ -4,8 +4,8 @@ const {token} = require('../../package.json');
 
 var options = {
   'method': 'GET',
-  'hostname': 'testeonline.adiantibuilder.com.br',
-  'path': '/vilela/gerenciadorpdv/auth/admin/admin',//separar login e senha
+  'hostname': '',
+  'path': '',//separar login e senha
   'headers': {
     'Authorization': token // separar o Token
   },

@@ -7,12 +7,7 @@
   "homepage": "./",
   "main": "./public/electron.js",
   "icon": "./public/sources/pdv.png",
-  "gerenciador":{
-    "tokenGerenciador":"Basic 9c812981ae770cf26ff8e15a88e57b78ff68d210e4b47574693fdd59901f",
-    "urlGerenciador":"testeonline.adiantibuilder.com.br",
-    "usuarioGerenciado":"admin",
-    "senhaGerenciador":"admin"
-  },
+ 
 
   "dependencies": {
     "@emotion/react": "^11.8.1",

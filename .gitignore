@@ -27,3 +27,4 @@ Database/produto/produto.db
 Database/systemBase/systemBase.db
 Database/venda/venda.db
 Database/systemBase/systemBase.db
+.env

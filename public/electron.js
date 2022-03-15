@@ -1,47 +1,7 @@
 // Module to control the application lifecycle and the native browser window.
-const { app, BrowserWindow, protocol } = require("electron");
-const path = require("path");
-const url = require("url");
-
-
-
- console.log(process.env.NODE_ENV);
-//função de teste ao salvar no banco
-/*
-(async() => {
-  try{
-    const auth = require("../Api/GerenciadorPdv/updateSystemBase");
-    console.log(auth);
-  }catch(error){
-    console.log(error);
-  }
-})();*/
-
-
-/*
-(async () =>{
-  try{
-  const database = require('../Database/systemBase/systemBaseMgr');
-  const Usuario = require("../Database/systemBase/models/usuario")
-  await database.sync('force');
-
-  const novoUser = await Usuario.create({
-    nome:"joao",
-    login:"joaogomes30",
-    password:"bananaphone",
-    email:"deuclécio@hotmail.com",
-  })
-
-  const usuario = await Usuario.findAll();
-  console.log( usuario);
-}catch(error){
-  console.log(error);
-}
-}) ();*/
-
-
-
-
+const { app, BrowserWindow, protocol }   = require("electron");
+const path                                        = require("path");
+const url                                         = require("url");
 
 // Create the native browser window.
 function createWindow() {
@@ -52,7 +12,7 @@ function createWindow() {
     // communicate between node-land and browser-land.
     icon:'/pdv.ico',
     webPreferences: {
-      preload: path.join(__dirname, "preload.js"),
+      preload: path.join(__dirname, "preload.js")
     },
   });
 

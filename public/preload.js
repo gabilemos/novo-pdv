@@ -1,7 +1,21 @@
-const { contextBridge } = require("electron");
-const Database = require("../Database/databaseEngine");
+const { BrowserWindow} = require("electron");
+
+//COMMON PROCESS
 process.once("loaded", () => {
-  contextBridge.exposeInMainWorld("versions", process.versions);
+  BrowserWindow.exposeInMainWorld("versions", process.versions);
 });
 
-//process.exposeInMainWorld('systemBase',Database);
+//DATABASE PROCESS
+const usuario                         = require("../Database/systemBase/models/usuario");
+const systemBase                      = require("../Database/systemBase/systemBaseMgr");
+
+//USUARIO
+BrowserWindow.exposeInMainWorld('usuario',{
+  async usuario(){
+    return usuario;
+  },
+})
+
+
+
+

@@ -1,13 +1,6 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import Paperbase from './template/Paperbase.jsx'
-import './index.css';
+import { render } from 'react-dom';
+import App from './AppRoutes';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <Paperbase />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+render(<App />, document.getElementById('root'));
 
 
